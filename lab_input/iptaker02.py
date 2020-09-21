@@ -10,3 +10,5 @@ print("You told me the IPv4 address is:", user_input)
 vender_input = input("Please enter vender name: ")
 
 print("You have a", vender_input, "with an IPV4 address of", user_input)
+
+print(f"You have a {vendor_input} with an IPV4 address of {user_input}.")
