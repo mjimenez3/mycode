@@ -156,8 +156,146 @@ rooms = {
     },
     'Underground Cliffs': {
         'jump': 'Underground River',
-
-    }
+    },
+        'Underground River': {
+        'south': 'Castle Landing',
+    },
+    'Castle Landing': {
+        'south': 'Outer Gatehouse',
+        'west': 'Dovecote',
+    },
+    'Dovecote': {
+        'east': 'Castle Landing',
+    },
+    'Outer Gatehouse': {
+        'south': 'Courtyard',
+        'north': 'Castle Landing',
+    },
+    'Courtyard': {
+        'east': 'Stables',
+        'west': 'Chapel',
+        'south': 'Gatehouse',
+        'north': 'Outer Gatehouse'
+    },
+    'Stables': {
+        'west': 'Courtyard',
+    },
+    'Chapel': {
+        'east': 'Courtyard',
+    },
+    'Gatehouse': {
+        'north': 'Courtyard',
+        'south': 'Lower Foyer',
+    },
+    'Lower Foyer': {
+        'north': 'Gatehouse',
+        'west': 'West Gallery',
+        'east': 'East Gallery',
+        'south': 'Upper Foyer',
+    },
+    'Upper Foyer': {
+        'north': 'Lower Foyer',
+        'west': 'Castle Dining Room',
+        'east': 'Study',
+        'south': 'Great Hall',
+    },
+    'Great Hall': {
+        'north': 'Upper Foyer',
+        'south': 'Fountain',
+        'west': 'Castle Kitchen',
+        'east': 'Sitting Room',
+    },
+    'Study': {
+        'west': 'Upper Foyer',
+        'south': 'Sitting Room',
+    },
+    'Fountain': {
+        'north': 'Great Hall'
+    },
+    'Sitting Room': {
+        'north': 'Study',
+        'west': 'Great Hall',
+        'east': 'East Hallway',
+    },
+    'East Hallway': {
+        'north': 'East Gallery',
+        'east': 'Master Suite',
+        'west': 'Sitting Room',
+    },
+    'East Gallery': {
+        'east': 'East Deck',
+        'south': 'East Hallway',
+        'west': 'Lower Foyer',
+    },
+    'East Deck': {
+        'west': 'East Gallery',
+    },
+    'Water Closet': {
+        'south': 'Master Suite'
+    },
+    'Master Suite': {
+        'north': 'Water Closet',
+        'south': 'Master Deck',
+        'east': 'East Hallway'
+    },
+    'Master Deck': {
+        'north': 'Master Suite'
+    },
+    'West Gallery': {
+        'east': 'Lower Foyer',
+        'south': 'West Hallway',
+        'west': 'Laundry Room',
+    },
+    'Laundry Room': {
+        'east': 'West Gallery'
+    },
+    'Castle Dining Room': {
+        'east': 'Upper Foyer',
+        'south': 'Butler Pantry',
+        'west': 'West Hallway'
+    },
+    'Butler Pantry': {
+        'north': 'Castle Dining Room',
+        'south': 'Castle Kitchen',
+    },
+    'Castle Kitchen': {
+        'north': 'Butler Pantry',
+        'east': 'Great Hall',
+        'south': 'Playroom',
+        'west': 'Breakfast Nook',
+    },
+    'Playroom': {
+        'north': 'Castle Kitchen',
+        'south': 'Family Deck',
+        'west': 'Family Room',
+    },
+    'Family Deck': {
+        'north': 'Playroom',
+        'west': 'Family Room',
+    },
+    'Family Room': {
+        'north': 'Breakfast Nook',
+        'east': 'Playroom',
+        'south': 'Family Deck',
+    },
+    'Breakfast Nook': {
+        'north': 'West Hallway',
+        'east': 'Castle Kitchen',
+        'south': 'Family Room',
+        'west': 'Covered Terrace',
+    },
+    'Covered Terrance': {
+        'east': 'Breakfast Nook'
+    },
+    'West Hallway': {
+        'north': 'West Gallery',
+        'east': 'Castle Dining Room',
+        'south': 'Breakfast Nook',
+        'west': 'Conservatory',
+    },
+    'Conservatory': {
+        'east': 'West Hallway'
+    },
 }
 
 # start the player in the Hall
