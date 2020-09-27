@@ -2,7 +2,7 @@
 
 # Replace RPG starter project with this code when new instructions are live
 
-# I was making a map of the grounds.  I will include a drawing of the map as well of how far I got..
+# I was making a map of the grounds.  I will include a drawing of the map as well of how far I got.
 
 def showInstructions():
     # print a main menu and the commands
@@ -156,8 +156,8 @@ rooms = {
     },
     'Underground Cliffs': {
         'jump': 'Underground River',
-    },
-        'Underground River': {
+        'down': 'Underground River',
+    },    'Underground River': {
         'south': 'Castle Landing',
     },
     'Castle Landing': {
@@ -186,6 +186,11 @@ rooms = {
     'Gatehouse': {
         'north': 'Courtyard',
         'south': 'Lower Foyer',
+        'east': 'Garrison\'s Quarters'
+    },
+    'Garrison\'s Quarters': {
+        'north': 'Dungeon',
+        'south': 'Castle Tunnel',
     },
     'Lower Foyer': {
         'north': 'Gatehouse',
@@ -257,6 +262,11 @@ rooms = {
     'Butler Pantry': {
         'north': 'Castle Dining Room',
         'south': 'Castle Kitchen',
+        'down': 'Tunnel',
+    },
+    'Castle Tunnel': {
+        'up': 'Butler Pantry',
+        'south': 'Labyrinth',
     },
     'Castle Kitchen': {
         'north': 'Butler Pantry',
@@ -294,8 +304,260 @@ rooms = {
         'west': 'Conservatory',
     },
     'Conservatory': {
-        'east': 'West Hallway'
+        'east': 'West Hallway',
     },
+    'Labyrinth': {
+        'north': 'Castle Tunnel',
+        'east': 'MA',
+        'south': 'RP',
+        'west': 'AM',
+    },
+    'AM': {
+        'east': 'Labyrinth',
+        'west': 'NM',
+    },
+    'NM': {
+        'south': 'RI',
+        'east': 'AM',
+    },
+    'RI': {
+        'north': 'NM',
+        'south': 'PA',
+        'east': 'AE',
+    },
+    'PA': {
+        'north': 'RI',
+        'south': 'HI',
+    },
+    'HI': {
+        'north': 'PA',
+        'south': 'FF',
+    },
+    'FF': {
+        'north': 'HI'
+    },
+    'AE': {
+        'west': 'RI',
+        'south': 'AQ'
+    },
+    'AQ': {
+        'north': 'AE',
+        'south': 'DZ',
+    },
+    'DZ': {
+        'north': 'AQ',
+        'south': 'AC'
+    },
+    'AC': {
+        'north': 'DZ',
+        'east': 'BF'
+    },
+    'ZT': {
+        'south': 'AZ',
+        'east': 'AO'
+    },
+    'AZ': {
+        'north': 'ZT',
+        'east': 'AG',
+    },
+    'MT': {
+        'east': 'BB'
+    },
+    'LL': {
+        'east': 'CA',
+    },
+    'AO':   {
+        'west': 'ZT',
+        'east': 'QM',
+    },
+    'AG': {
+        'west': 'AZ',
+        'south': 'BB',
+        'east': 'GM'
+    },
+    'BB': {
+        'north': 'AG',
+        'west': 'MT',
+        'east': 'AA',
+    },
+    'CA': {
+        'west': 'LL',
+        'east': 'DF'
+    },
+    'RP': {
+        'north': 'Labyrinth',
+        'south': 'DQ',
+    },
+    'DQ': {
+        'north': 'RP',
+        'east': 'AD'
+    },
+    'AI': {
+        'south': 'BF'
+    },
+    'BF': {
+        'north': 'AI',
+        'west': 'AC',
+        'south': 'QM'
+    },
+    'QM': {
+        'north': 'BF',
+        'west': 'AO'
+    },
+    'GM': {
+        'west': 'AG',
+        'east': 'YM',
+    },
+    'AA': {
+        'west': 'BB'
+    },
+    'DF': {
+        'west': 'CA',
+        'east': 'Maze'
+    },
+    'FC': {
+        'east': 'TA'
+    },
+    'AD': {
+        'east': 'DQ',
+        'west': 'AP',
+    },
+    'DL': {
+        'east': 'BG',
+        'south': 'AH',
+    },
+    'AH': {
+        'north': 'DL',
+        'east': 'AJ'
+    },
+    'AB': {
+        'south': 'YM'
+    },
+    'YM': {
+        'west': 'GM'
+    },
+    'BA': {
+        'south': 'Maze'
+    },
+    'RM': {
+        'west': 'MA',
+        'south': 'TA'
+    },
+    'TA': {
+        'north': 'RM',
+        'west': 'FC',
+        'east': 'LZ'
+    },
+    'AP': {
+        'west': 'AD',
+        'south': 'BG'
+    },
+    'BG': {
+        'north': 'AP',
+        'west': 'DL'
+    },
+    'AJ': {
+        'west': 'AH',
+        'south': 'DB',
+        'east': 'IT'
+    },
+    'DB': {
+        'north': 'AJ',
+        'east': 'BH'
+    },
+    'AK': {
+        'south': 'RR'
+    },
+    'RR': {
+        'north': 'AK',
+        'south': 'XS',
+        'east': 'QE'
+    },
+    'XS': {
+        'north': 'RR',
+        'west': 'Maze'
+    },
+    'SO': {
+        'south': 'LZ',
+        'east': 'MN',
+    },
+    'LZ': {
+        'west': 'TA',
+        'north': 'SO'
+    },
+    'BI': {
+        'south': 'ST'
+    },
+    'ST': {
+        'north': 'BI',
+        'south': 'IT',
+    },
+    'IT': {
+        'north': 'ST',
+        'west': 'AJ',
+        'south': 'BH'
+    },
+    'BH': {
+        'north': 'IT',
+        'west': 'DB'
+    },
+    'UP': {
+        'east': 'WO',
+        'south': 'QE',
+    },
+    'QE': {
+        'north': 'UP',
+        'west': 'RR',
+        'south': 'PP'
+    },
+    'PP': {
+        'north': 'QE',
+        'east': 'VA'
+    },
+    'MN': {
+        'west': 'SO',
+        'south': 'VD'
+    },
+    'VD': {
+        'north': 'MN',
+        'south': 'WE'
+    },
+    'WE': {
+        'north': 'VD',
+        'south': 'NV'
+    },
+    'NV': {
+        'north': 'WE',
+        'south': 'LE'
+    },
+    'LE': {
+        'north': 'NV',
+        'south': 'GL'
+    },
+    'GL': {
+        'north': 'LE',
+        'south': 'WO'
+    },
+    'WO': {
+        'north': 'GL',
+        'west': 'UP',
+        'south': 'CD'
+    },
+    'CD': {
+        'north': 'WO',
+    },
+    'VA': {
+        'west': 'PP'
+    },
+    'MA': {
+        'east': 'Labyrinth',
+        'west': 'RM'
+    },
+    'Maze': {
+        'east': 'XS',
+        'north': 'BA',
+        'west': 'DF'
+    }
 }
 
 # start the player in the Hall
@@ -360,12 +622,3 @@ while True:
     elif 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item']:
         print('A monster has got you... GAME OVER!')
         break
-
-
-
-
-
-
-
-
-
