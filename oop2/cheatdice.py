@@ -22,7 +22,7 @@ class Cheat_Loaded_Dice(Player):
   def cheat(self):
     i = 0
     while i < len(self.dice): # i is less than length of list (3)
-      if self.dice[i] < 6:  # if it's less than 6
-        self.dice[i] += 1 #then add 1
+      if self.dice[i] < 6:  # if first die is less than 6
+        self.dice[i] += 1 #then add 1 to die
       i += 1  # add 1 to i, and loop again.
 

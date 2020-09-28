@@ -1,0 +1,328 @@
+[1mdiff --cc rpg_game/mygame01.py[m
+[1mindex a6d36d5,ed3312e..0000000[m
+[1m--- a/rpg_game/mygame01.py[m
+[1m+++ b/rpg_game/mygame01.py[m
+[36m@@@ -304,260 -294,8 +304,260 @@@[m [mrooms = [m
+          'west': 'Conservatory',[m
+      },[m
+      'Conservatory': {[m
+[31m -        'east': 'West Hallway'[m
+[32m +        'east': 'West Hallway',[m
+[32m +    },[m
+[32m +    'Labyrinth': {[m
+[32m +        'north': 'Castle Tunnel',[m
+[32m +        'east': 'MA',[m
+[32m +        'south': 'RP',[m
+[32m +        'west': 'AM',[m
+[32m +    },[m
+[31m-     'Maze': {[m
+[31m-         'east': 'XS',[m
+[31m-         'north': 'BA',[m
+[31m-         'west': 'DF'[m
+[31m-     }[m
+[31m-     'MA': {[m
+[31m-         'west': 'Labyrinth',[m
+[31m-         'east': 'RM'[m
+[31m-     },[m
+[32m +    'AM': {[m
+[32m +        'east': 'Labyrinth',[m
+[32m +        'west': 'NM',[m
+[32m +    },[m
+[32m +    'NM': {[m
+[32m +        'south': 'RI',[m
+[32m +        'east': 'AM',[m
+[32m +    },[m
+[32m +    'RI': {[m
+[32m +        'north': 'NM',[m
+[32m +        'south': 'PA',[m
+[32m +        'east': 'AE',[m
+[32m +    },[m
+[32m +    'PA': {[m
+[32m +        'north': 'RI',[m
+[32m +        'south': 'HI',[m
+[32m +    },[m
+[32m +    'HI': {[m
+[32m +        'north': 'PA',[m
+[32m +        'south': 'FF',[m
+[32m +    },[m
+[32m +    'FF': {[m
+[32m +        'north': 'HI'[m
+[32m +    },[m
+[32m +    'AE': {[m
+[32m +        'west': 'RI',[m
+[32m +        'south': 'AQ'[m
+[32m +    },[m
+[32m +    'AQ': {[m
+[32m +        'north': 'AE',[m
+[32m +        'south': 'DZ',[m
+[32m +    },[m
+[32m +    'DZ': {[m
+[32m +        'north': 'AQ',[m
+[32m +        'south': 'AC'[m
+[32m +    },[m
+[32m +    'AC': {[m
+[32m +        'north': 'DZ',[m
+[32m +        'east': 'BF'[m
+[32m +    },[m
+[32m +    'ZT': {[m
+[32m +        'south': 'AZ',[m
+[32m +        'east': 'AO'[m
+[32m +    },[m
+[32m +    'AZ': {[m
+[32m +        'north': 'ZT',[m
+[32m +        'east': 'AG',[m
+[32m +    },[m
+[32m +    'MT': {[m
+[32m +        'east': 'BB'[m
+[32m +    },[m
+[32m +    'LL': {[m
+[32m +        'east': 'CA',[m
+[32m +    },[m
+[32m +    'AO':   {[m
+[32m +        'west': 'ZT',[m
+[32m +        'east': 'QM',[m
+[32m +    },[m
+[32m +    'AG': {[m
+[32m +        'west': 'AZ',[m
+[32m +        'south': 'BB',[m
+[32m +        'east': 'GM'[m
+[32m +    },[m
+[32m +    'BB': {[m
+[32m +        'north': 'AG',[m
+[32m +        'west': 'MT',[m
+[32m +        'east': 'AA',[m
+[32m +    },[m
+[32m +    'CA': {[m
+[32m +        'west': 'LL',[m
+[32m +        'east': 'DF'[m
+[32m +    },[m
+[32m +    'RP': {[m
+[32m +        'north': 'Labyrinth',[m
+[32m +        'south': 'DQ',[m
+[32m +    },[m
+[32m +    'DQ': {[m
+[32m +        'north': 'RP',[m
+[32m +        'east': 'AD'[m
+[32m +    },[m
+[32m +    'AI': {[m
+[32m +        'south': 'BF'[m
+[32m +    },[m
+[32m +    'BF': {[m
+[32m +        'north': 'AI',[m
+[32m +        'west': 'AC',[m
+[32m +        'south': 'QM'[m
+[32m +    },[m
+[32m +    'QM': {[m
+[32m +        'north': 'BF',[m
+[32m +        'west': 'AO'[m
+[32m +    },[m
+[32m +    'GM': {[m
+[32m +        'west': 'AG',[m
+[32m +        'east': 'YM',[m
+[32m +    },[m
+[32m +    'AA': {[m
+[32m +        'west': 'BB'[m
+[32m +    },[m
+[32m +    'DF': {[m
+[32m +        'west': 'CA',[m
+[32m +        'east': 'Maze'[m
+[32m +    },[m
+[32m +    'FC': {[m
+[32m +        'east': 'TA'[m
+[32m +    },[m
+[32m +    'AD': {[m
+[32m +        'east': 'DQ',[m
+[32m +        'west': 'AP',[m
+[32m +    },[m
+[32m +    'DL': {[m
+[32m +        'east': 'BG',[m
+[32m +        'south': 'AH',[m
+[32m +    },[m
+[32m +    'AH': {[m
+[32m +        'north': 'DL',[m
+[32m +        'east': 'AJ'[m
+      },[m
+[32m +    'AB': {[m
+[32m +        'south': 'YM'[m
+[32m +    },[m
+[32m +    'YM': {[m
+[32m +        'west': 'GM'[m
+[32m +    },[m
+[32m +    'BA': {[m
+[32m +        'south': 'Maze'[m
+[32m +    },[m
+[32m +    'RM': {[m
+[32m +        'west': 'MA',[m
+[32m +        'south': 'TA'[m
+[32m +    },[m
+[32m +    'TA': {[m
+[32m +        'north': 'RM',[m
+[32m +        'west': 'FC',[m
+[32m +        'east': 'LZ'[m
+[32m +    },[m
+[32m +    'AP': {[m
+[32m +        'west': 'AD',[m
+[32m +        'south': 'BG'[m
+[32m +    },[m
+[32m +    'BG': {[m
+[32m +        'north': 'AP',[m
+[32m +        'west': 'DL'[m
+[32m +    },[m
+[32m +    'AJ': {[m
+[32m +        'west': 'AH',[m
+[32m +        'south': 'DB',[m
+[32m +        'east': 'IT'[m
+[32m +    },[m
+[32m +    'DB': {[m
+[32m +        'north': 'AJ',[m
+[32m +        'east': 'BH'[m
+[32m +    },[m
+[32m +    'AK': {[m
+[32m +        'south': 'RR'[m
+[32m +    },[m
+[32m +    'RR': {[m
+[32m +        'north': 'AK',[m
+[32m +        'south': 'XS',[m
+[32m +        'east': 'QE'[m
+[32m +    },[m
+[32m +    'XS': {[m
+[32m +        'north': 'RR',[m
+[32m +        'west': 'Maze'[m
+[32m +    },[m
+[32m +    'SO': {[m
+[32m +        'south': 'LZ',[m
+[32m +        'east': 'MN',[m
+[32m +    },[m
+[32m +    'LZ': {[m
+[32m +        'west': 'TA',[m
+[32m +        'north': 'SO'[m
+[32m +    },[m
+[32m +    'BI': {[m
+[32m +        'south': 'ST'[m
+[32m +    },[m
+[32m +    'ST': {[m
+[32m +        'north': 'BI',[m
+[32m +        'south': 'IT',[m
+[32m +    },[m
+[32m +    'IT': {[m
+[32m +        'north': 'ST',[m
+[32m +        'west': 'AJ',[m
+[32m +        'south': 'BH'[m
+[32m +    },[m
+[32m +    'BH': {[m
+[32m +        'north': 'IT',[m
+[32m +        'west': 'DB'[m
+[32m +    },[m
+[32m +    'UP': {[m
+[32m +        'east': 'WO',[m
+[32m +        'south': 'QE',[m
+[32m +    },[m
+[32m +    'QE': {[m
+[32m +        'north': 'UP',[m
+[32m +        'west': 'RR',[m
+[32m +        'south': 'PP'[m
+[32m +    },[m
+[32m +    'PP': {[m
+[32m +        'north': 'QE',[m
+[32m +        'east': 'VA'[m
+[32m +    },[m
+[32m +    'MN': {[m
+[32m +        'west': 'SO',[m
+[32m +        'south': 'VD'[m
+[32m +    },[m
+[32m +    'VD': {[m
+[32m +        'north': 'MN',[m
+[32m +        'south': 'WE'[m
+[32m +    },[m
+[32m +    'WE': {[m
+[32m +        'north': 'VD',[m
+[32m +        'south': 'NV'[m
+[32m +    },[m
+[32m +    'NV': {[m
+[32m +        'north': 'WE',[m
+[32m +        'south': 'LE'[m
+[32m +    },[m
+[32m +    'LE': {[m
+[32m +        'north': 'NV',[m
+[32m +        'south': 'GL'[m
+[32m +    },[m
+[32m +    'GL': {[m
+[32m +        'north': 'LE',[m
+[32m +        'south': 'WO'[m
+[32m +    },[m
+[32m +    'WO': {[m
+[32m +        'north': 'GL',[m
+[32m +        'west': 'UP',[m
+[32m +        'south': 'CD'[m
+[32m +    },[m
+[32m +    'CD': {[m
+[32m +        'north': 'WO',[m
+[32m +    },[m
+[32m +    'VA': {[m
+[32m +        'west': 'PP'[m
+[32m++    },[m
+[32m++    'MA': {[m
+[32m++        'east': 'Labyrinth',[m
+[32m++        'west': 'RM'[m
+[32m++    },[m
+[32m++    'Maze': {[m
+[32m++        'east': 'XS',[m
+[32m++        'north': 'BA',[m
+[32m++        'west': 'DF'[m
+[32m +    }[m
+  }[m
+  [m
+  # start the player in the Hall[m
+[1mdiff --git a/oop-intro/first-oop.py b/oop-intro/first-oop.py[m
+[1mindex bc2ae4d..fdf0325 100755[m
+[1m--- a/oop-intro/first-oop.py[m
+[1m+++ b/oop-intro/first-oop.py[m
+[36m@@ -11,9 +11,12 @@[m [mclass Player:[m
+     self.dice = [] # clears current dice[m
+     for i in range(3):[m
+       self.dice.append(randint(1,6))[m
+[32m+[m[41m  [m
+   #cheat roll[m
+[31m-  def roll1(self):[m
+[31m-    self.dice = [6,5,6][m
+[32m+[m[32m  def weighted_dice(self):[m
+[32m+[m[32m    self.dice = [][m
+[32m+[m[32m    for i in range(3):[m
+[32m+[m[32m      self.dice.append(randint(5,6))[m
+ [m
+   def get_dice(self):[m
+     return self.dice[m
+[36m@@ -22,15 +25,14 @@[m [mplayer1 = Player()[m
+ player2 = Player()[m
+ [m
+ player1.roll()[m
+[31m-player2.roll1()[m
+[32m+[m[32mplayer2.weighted_dice()[m
+[32m+[m
+ [m
+[31m-print();sleep(0.3)[m
+ print("Player 1 rolled" + str(player1.get_dice()))[m
+[31m-print();sleep(0.3)[m
+[31m-print("Player 2 rolled" + str(player2.get_dice()))[m
+ print()[m
+[31m-print("Winner is...");sleep(0.4)[m
+[32m+[m[32mprint("Player 2 rolled" + str(player2.get_dice()))[m
+ print()[m
+[32m+[m
+ if sum(player1.get_dice()) == sum(player2.get_dice()):[m
+   print("Draw!")[m
+ elif sum(player1.get_dice()) > sum(player2.get_dice()):[m
+[1mdiff --git a/oop2/cheatdice.py b/oop2/cheatdice.py[m
+[1mindex 4b878db..34219cb 100644[m
+[1m--- a/oop2/cheatdice.py[m
+[1m+++ b/oop2/cheatdice.py[m
+[36m@@ -22,7 +22,7 @@[m [mclass Cheat_Loaded_Dice(Player):[m
+   def cheat(self):[m
+     i = 0[m
+     while i < len(self.dice): # i is less than length of list (3)[m
+[31m-      if self.dice[i] < 6:  # if it's less than 6[m
+[31m-        self.dice[i] += 1 #then add 1[m
+[32m+[m[32m      if self.dice[i] < 6:  # if first die is less than 6[m
+[32m+[m[32m        self.dice[i] += 1 #then add 1 to die[m
+       i += 1  # add 1 to i, and loop again.[m
+ [m
