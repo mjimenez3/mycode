@@ -312,15 +312,6 @@ rooms = {
         'south': 'RP',
         'west': 'AM',
     },
-    'Maze': {
-        'east': 'XS',
-        'north': 'BA',
-        'west': 'DF'
-    }
-    'MA': {
-        'west': 'Labyrinth',
-        'east': 'RM'
-    },
     'AM': {
         'east': 'Labyrinth',
         'west': 'NM',
@@ -557,6 +548,15 @@ rooms = {
     },
     'VA': {
         'west': 'PP'
+    },
+    'MA': {
+        'east': 'Labyrinth',
+        'west': 'RM'
+    },
+    'Maze': {
+        'east': 'XS',
+        'north': 'BA',
+        'west': 'DF'
     }
 }
 
