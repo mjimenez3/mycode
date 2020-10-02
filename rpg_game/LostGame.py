@@ -1,33 +1,39 @@
 #!/usr/bin/python3
-from rooms import rooms
-import sys
+from lost import rooms
+from time import sleep
+
+#from playsound import playsound
 
 with open('LostArt.txt', 'r') as pic:
     link = pic.read()
     print(link)
 
 
+#playsound("Lost intro.mp3")
+# Replace RPG starter project with this code when new instructions are live
 
-
+# I was making a map of the grounds.  I will include a drawing of the map as well of how far I got.
 
 def showInstructions():
     # print a main menu and the commands
     print('''
-RPG Game
+Lost RPG Game
 ========
 Commands:
   go [direction]
   get [item]
+  use [item]
+  eat [item]
 ''')
 
 
 def showStatus():
     # print the player's current status
     print('---------------------------')
-    print('You are in the ' + currentRoom)
-    #if "desc" in rooms[currentRoom]:
-     #   print(rooms[currentRoom]['desc'])
+    print('You are at ' + currentRoom)
     # print the current inventory
+    if "desc" in rooms[currentRoom]:
+        print(rooms[currentRoom]['desc'])
     print('Inventory : ' + str(inventory))
     # print an item if there is one
     if "item" in rooms[currentRoom]:
@@ -38,14 +44,11 @@ def showStatus():
 # an inventory, which is initially empty
 inventory = []
 
-# a dictionary linking a room to other rooms.py
-# A dictionary linking a room to other rooms.py
-
 # this is where rooms goes
 rooms = rooms
 
 # start the player in the Hall
-currentRoom = 'Hall'
+currentRoom = 'Survivor\'s Beach'
 
 showInstructions()
 
@@ -90,16 +93,25 @@ while True:
         else:
             # tell them they can't get it
             print('Can\'t get ' + move[1] + '!')
+    if move[0] == 'eat':
+        if "item" in inventory == 'fruit':
+            print("Eating good fruit, makes musical toots!")
+        else:
+            print("you have no food available.")
 
-    ## Define how a player can win
-    if currentRoom == 'Triforce Room':
-        print('You not only escaped Island alive, you beat the first dungeon level of Zelda!')
-        with open('winner.txt', 'r') as pic:
-            winner= pic.read()
-            print(winner)
-        sys.exit()
+    # Define how a player can win
+    # if currentRoom == 'Garden' and 'key' in inventory and 'potion' in inventory:
+    # print('You escaped the house with the ultra rare key and magic potion... YOU WIN!')
+    # break
 
-    # If a player enters a room with the black smoke
-   # if 'item' in rooms[currentRoom] and 'Black Smoke' in rooms[currentRoom]['item']:
-    #    print('The Black Smoke has come to judge you... GAME OVER!')
-     #   sys.exit()
+    # If a player enters a room with a monster BUT HAS A COOKIE
+    # if 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item'] and 'cookie' in inventory:
+    # print('The monster takes your cookie and runs away! Whew!')
+    # del rooms[currentRoom]['item']
+    # inventory.remove('cookie')
+
+    # If a player enters a room with a monster
+    # elif 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item']:
+    # print('A monster has got you... GAME OVER!')
+    # break
+

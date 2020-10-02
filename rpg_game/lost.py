@@ -4,26 +4,33 @@ rooms = {
         'west': 'Sun\'s Garden',
         'north': 'Caves',
         'east': 'Cockpit',
+        'desc': 'This is the site where your plane has crashed and you all set up camp.'
     },
     'Sun\'s Garden': {
         'east': 'Survivor\'s Beach',
         'west': 'Mr. Eko\'s Church',
+        'desc': 'Sun\'s Garden...she\'s not here, take something to eat.',
+        'item': 'fruit'
     },
     'Mr. Eko\'s Church': {
         'east': 'Sun\'s Garden',
-        'west': 'Four Toed Statue'
+        'west': 'Four Toed Statue',
+        'desc': 'This is also the place where Locke made his sweat box, do you see any visions?'
     },
     'Cockpit': {
         'west': 'Survivor\'s Beach',
         'south': 'Fuselage',
-        'north': 'Caves'
+        'north': 'Caves',
+        'desc': 'Charlie left his stash, maybe you can get some good vibes if you find it.',
+        'item': 'heroin',
     },
     'Caves': {
         'south': 'Survivor\'s Beach',
         'east': 'Cockpit',
         'northeast': 'Heart of the Island',
         'north': 'The Pearl',
-        'west': 'The Tempest'
+        'west': 'The Tempest',
+        'desc': 'Camp site #2 for those ready to live on the island, there are bones, and fresh water.',
     },
     # Secret only accessible if you are the protector of the island
     'Heart of the Island': {
@@ -31,18 +38,22 @@ rooms = {
     },
     'Four Toed Statue': {
         'north': 'French Expedition Camp',
-        'south': 'Mr. Eko\'s Church'
+        'south': 'Mr. Eko\'s Church',
+        'desc': 'All that is left of the statue are the feet. Do you know what lies in the shadow of the statue?'
     },
     'Fuselage': {
         'north': 'Cockpit',
         'east': 'Well',
+
     },
     'Well': {
         'west': 'Fuselage',
         'south': 'Jacob\'s Cave'
     },
     'Jacob\'s Cave': {
-        'north': 'Well'
+        'north': 'Well',
+        'desc': 'On the cave wall you see names, most are crossed out, do you see your name?',
+
     },
     'Rousseau\'s Camp': {
         'west': 'Well',
@@ -51,7 +62,8 @@ rooms = {
     },
     'Lighthouse': {
         'north': 'Rousseau\'s Camp',
-        'east': 'The Looking Glass'
+        'east': 'The Looking Glass',
+        'desc': 'You see your name, you move the mirror to your name and see your house, Jacob\'s been watching you.'
     },
     'The Looking Glass': {
         'west': 'Rousseau\'s Camp',
@@ -61,7 +73,9 @@ rooms = {
     'Locke\'s Beach': {
         'south': 'The Looking Glass',
         'west': 'Black Rock',
-        'north': 'Hydra Island'
+        'north': 'Hydra Island',
+        'desc': 'Beach where you can use a boat to get to Hydra Island.',
+        'item': 'Boat',
     },
     'Hydra Island': {
         'south': 'Locke\'s Beach',
@@ -71,6 +85,8 @@ rooms = {
         'east': 'Locke\'s Beach',
         'south': 'The Pearl',
         'north': 'The Orchid',
+        'item': 'Dynamite',
+        'desc': 'An old ship from the 1800\'s, in the middle of the island?'
     },
     'The Pearl': {
         'east': 'Black Rock',
@@ -129,6 +145,8 @@ rooms = {
         'east': 'Tail Section'
     },
     'Tail Section': {
-        'west': 'The Arrow'
+        'west': 'The Arrow',
+        'desc': 'The campsite for the people in the tail section of Flight 815.'
     }
 }
+

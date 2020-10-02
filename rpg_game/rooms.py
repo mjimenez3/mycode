@@ -1,15 +1,17 @@
 rooms = {
-
+    # house
     'Hall': {
         'south': 'Kitchen',
         'east': 'Dining Room',
         'west': 'Bedroom',
         'north': 'Master Bedroom',
-        'item': 'key'
+        'item': 'key',
+        'down': 'Survivor\'s Beach',
+        'up': 'Room 1',
+        'left': 'Barracks'
     },
     'Kitchen': {
         'north': 'Hall',
-        'item': 'monster',
         'south': 'Living Room'
     },
     'Dining Room': {
@@ -522,8 +524,10 @@ rooms = {
     'Maze': {
         'east': 'XS',
         'north': 'BA',
-        'west': 'DF'
+        'west': 'DF',
+        'south': 'Survivor\'s Beach'
     },
+    # From Labyrinth
     # Lost Island
     'Survivor\'s Beach': {
         'west': 'Sun\'s Garden',
@@ -536,7 +540,7 @@ rooms = {
     },
     'Mr. Eko\'s Church': {
         'east': 'Sun\'s Garden',
-        'west': 'Four Toed Statue'
+        'west': 'French Expedition Camp'
     },
     'Cockpit': {
         'west': 'Survivor\'s Beach',
@@ -552,11 +556,16 @@ rooms = {
     },
     # Secret only accessible if you are the protector of the island
     'Heart of the Island': {
-        'southwest': 'Caves'
+        'down': 'Room 1',  # To room 1 of Zelda level 1
+        'item': 'sword',
     },
     'Four Toed Statue': {
         'north': 'French Expedition Camp',
-        'south': 'Mr. Eko\'s Church'
+        'south': 'Mr. Eko\'s Church',
+        'east': 'The Tempest',
+        'item': 'Protector Badge',
+        'desc': 'You find Jacob, you drink the drink, you are now the protector of the Island!\n'
+                'Find the heart of the Island northeast of the Caves.'
     },
     'Fuselage': {
         'north': 'Cockpit',
@@ -586,11 +595,11 @@ rooms = {
     'Locke\'s Beach': {
         'south': 'The Looking Glass',
         'west': 'Black Rock',
-        'north': 'Hydra Island'
+        'north': 'Hydra Island',
+        'item': 'Black Smoke'
     },
     'Hydra Island': {
         'south': 'Locke\'s Beach',
-        # maybe more
     },
     'Black Rock': {
         'east': 'Locke\'s Beach',
@@ -621,7 +630,7 @@ rooms = {
         'north': 'Barracks'
     },
     'French Expedition Camp': {
-        'east': 'Four Toed Statue',
+        'east': 'Mr. Eko\'s Church',
         'west': 'The Door',
     },
     'The Door': {
@@ -636,7 +645,9 @@ rooms = {
         'north': 'Boathouse',
         'west': 'The Temple',
         'south': 'The Orchid',
-        'east': 'The Flame'
+        'east': 'The Flame',
+        'down': 'Four Toed Statue',
+        'item': 'cup'
     },
     'Boathouse': {
         'south': 'Barracks'
@@ -655,5 +666,93 @@ rooms = {
     },
     'Tail Section': {
         'west': 'The Arrow'
-    }
+    },
+    'Room 1': {
+        'north': 'Room 4',
+        'east': 'Room 3',
+        'west': 'Room 2'
+    },
+    'Room 2': {
+        'east': 'Room 1',
+        'item': 'key',
+    },
+    'Room 3': {
+        'west': 'Room 1',
+        'item': 'key'
+    },
+    'Room 4': {
+        'south': 'Room 1',
+        'north': 'Room 6'
+    },
+    'Room 5': {
+        'north': 'Room 9',
+        'east': 'Room 6',
+    },
+    'Room 6': {
+        'west': 'Room 5',
+        'east': 'Room 7',
+        # hidden until bombed
+        'north': 'Room 10',
+        'item': 'key'
+    },
+    'Room 7': {
+        'west': 'Room 6',
+        # hidden until bombed
+        'north': 'Room 11',
+        'item': 'Compass'
+    },
+    'Room 8': {
+        'east': 'Room 9'
+    },
+    'Room 9': {  # move center block to open west room
+        'west': 'Room 8',
+        'south': 'Room 5',
+        'east': 'Room 10'
+    },
+    'Room 10': {
+        'west': 'Room 9',
+        'north': 'Room 13',
+        'east': 'Room 11',
+        # hidden until bombed
+        'south': 'Room 6',
+        'item': 'Map'
+    },
+    'Room 11': {
+        'west': 'Room 10',
+        'east': 'Room 12',
+        # hidden until bombed
+        'south': 'Room 7',
+    },
+    'Room 12': {
+        'west': 'Room 11',
+        'north': 'Room 14',
+        'item': 'key'
+    },
+    'Room 13': {
+        'north': 'Room 17',
+        'south': 'Room 10',
+    },
+    'Room 14': {
+        'south': 'Room 12',
+        'east': 'Triforce'
+    },
+    'Triforce Room': {
+        'west': 'Room 14',
+        'item': 'Triforce'
+    },
+    'Room 16': {
+        'east': 'Room 17',
+        # move block to go down stairs
+        'down': 'Secret Bow Room',
+    },
+    'Room 17': {
+        'west': 'Room 16',
+        'south': 'Room 12'
+    },
+    'Secret Bow Room': {
+        'up': 'Room 16',
+        'item': 'Bow'
+    },
+
+
 }
